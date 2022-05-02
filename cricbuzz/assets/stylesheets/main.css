@@ -1,0 +1,171 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    background-color: #E3E6E3;
+    font-family: helvetica;
+
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin-top: 0;
+}
+ul{
+    padding:0;
+    margin:0;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+/* Helper classes */
+.row{
+    display:flex;
+}
+.w-100{
+    width:100%;
+}
+.space-between{
+    justify-content: space-between;
+}
+.space-around{
+    justify-content: space-around;
+}
+
+.center{
+    justify-content:center;
+}
+
+#container{
+    width:72%;
+    margin:10px auto 0 auto;
+}
+/* header section */
+header{
+    background-color: #009270;
+    padding: 0px 18px;
+}
+header .col1{
+    width:10%;
+    margin-top:10px;
+}
+header .col2{
+    width:70%;
+}
+
+nav>ul>li>a{
+    color:white;
+    text-transform: capitalize;
+    display: block;
+    padding:18px 8px;
+    font-size: 14px;
+}
+nav>ul>li>a:hover{
+    background-color: #028062;
+}
+
+
+nav ul li a i{
+    display: inline-block;
+    font-size: 10px;
+    color:white;
+    margin-left: 5px;
+}
+nav ul li .dropdown{
+    background-color: white;
+    position: absolute;
+    width:200%;
+    display: none;
+}
+nav ul li{
+    position: relative;
+}
+
+
+.user-menu ul li:nth-child(2),
+
+.user-menu ul li:nth-child(3)
+{
+    padding-top: 5px;
+}
+nav ul li .dropdown a{
+    color:black;
+    text-transform: capitalize;
+    display: block;
+    padding:10px 5px;
+    font-size: 14px;
+}
+
+nav .dropdown ul li:hover a{
+    background-color: #E3E6E3;
+}
+nav ul li:hover .dropdown{
+    display: block;
+}
+ .user-menu i{
+    color:white;
+    font-size: 16px;
+}
+.user-menu li{
+    margin:12px 5px 0 0;
+    
+}
+.user-menu li:first-child{
+    margin-right: 25px;
+}
+.user-menu li:first-child a{
+    font-size: 16px;
+    display: block;
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+/* sec -header section */
+#sec-header{
+    background-color: #4A4A4A;
+}
+#sec-header .active a{
+    background-color: #222;
+}
+#sec-header a{
+    color:white;
+    font-size: 12px;
+    display:block;
+    padding: 13px 12px;
+}
+#sec-header a:hover{
+    background-color: #444444;
+}
+/* Content section */
+
+.sidebar1{
+    width:21%;
+}
+.sidebar2{
+    width: 30%;
+}
+
+.sidebar1 h2{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #009270;
+}
+.sidebar1 .latest-news{
+    background-color: white;
+    padding: 12px 14px;
+}
+.sidebar1 .latest-news ul li a{
+    display: block;
+    font-size: 16px;
+    color: #222;
+}
+.sidebar1 .latest-news ul li{
+    margin-bottom:18px;
+}
+.sidebar1 .latest-news ul li a:hover{
+    text-decoration: underline;
+}
+.sidebar1 .latest-news ul li small{
+    color: #444444;
+}
