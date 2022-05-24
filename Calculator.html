@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title></title>
+    <style>
+        #container{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(5,50px);
+
+            
+        }
+        input{
+            grid-column: span 4;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="row">
+        <input type="text" placeholder="0">
+        <button onclick="num();">7</button>
+        <button onclick="num();">8</button>
+        <button onclick="num();">9</button>
+        <button onclick="showopr();">+</button>
+
+        <button onclick="num();">4</button>
+        <button onclick="num();">5</button>
+        <button onclick="num();">6</button>
+        <button onclick="showopr();">-</button>
+
+        <button onclick="num();">1</button>
+        <button onclick="num();">2</button>
+        <button onclick="num();">3</button>
+        <button onclick="showopr();">*</button>
+
+        <button onclick="num();">0</button>
+        <button onclick="calc();">=</button>
+        <button onclick="Clear()">C</button>
+        <button onclick="showopr();">/</button>
+    </div>
+</div>
+    <script>
+        box = document.querySelector("input");
+        
+          clearbtn = document.querySelector(".clear");
+          clearbtn.addEventListener("click",Clear);
+        
+        isOpr = false;
+        
+        function num()
+        {
+            box.value+= event.target.innerHTML;
+            isOpr=false;
+        } 
+        function calc()
+        {
+            box.value=eval(box.value);
+        }
+        
+            function showopr()
+        {
+            if (isOpr == true)
+                {
+                    box.value = box.value.slice(0,box.value.length-1)+event.target.innerHTML;
+                }
+            else{
+                            box.value+= event.target.innerHTML;
+            }
+            isOpr=true;
+        }
+            
+        function Clear()
+        {
+                        box.value = "";
+        }       
+    </script>
+</body>
+</html>
